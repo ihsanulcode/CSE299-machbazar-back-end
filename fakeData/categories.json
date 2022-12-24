@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01",
+    "name": "crab"
+  },
+  {
+    "id": "02",
+    "name": "prawn"
+  },
+  {
+    "id": "03",
+    "name": "dry fish"
+  },
+  {
+    "id": "04",
+    "name": "farmed fish"
+  },
+  {
+    "id": "05",
+    "name": "deshi"
+  },
+  {
+    "id": "06",
+    "name": "pond"
+  },
+  {
+    "id": "07",
+    "name": "howl"
+  },
+  {
+    "id": "08",
+    "name": "beel"
+  },
+  {
+    "id": "09",
+    "name": "River"
+  },
+  {
+    "id": "10",
+    "name": "Sea"
+  }
+]
