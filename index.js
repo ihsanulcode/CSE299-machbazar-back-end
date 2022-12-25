@@ -56,10 +56,7 @@ client.connect((err) => {
     const option = { upsert: "true" };
     const updatedUser = {
       $set: {
-        name: user.name,
-        email: user.email,
         address: user.address,
-        phone: user.phone,
       },
     };
     console.log(user);
@@ -153,6 +150,16 @@ client.connect((err) => {
     const cursor = productCollection.find(query);
     const sellerProducts = await cursor.toArray();
     res.send(sellerProducts);
+  });
+
+  // GET ALL PRODUCTS ACCORDING TO A CATEGORY
+  app.get("/products/category/:catName", async (req, res) => {
+    const catName = req.params.catName;
+    const query = { category: catName };
+    const cursor = productCollection.find(query);
+    const searchProducts = await cursor.toArray();
+    console.log(searchProducts);
+    res.send(searchProducts);
   });
 
   // GET A PRODUCT
@@ -335,23 +342,6 @@ client.connect((err) => {
   app.get("/fishCards", (req, res) => {
     res.send(fishCards);
   });
-
-  // viewing details after clicking on fish card
-  app.get("/fishCard/:id", (req, res) => {
-    const fishId = req.params.id;
-    const fishData = fishCards.find((fish) => fish.id === fishId);
-    res.send(fishData);
-  });
-
-  //  clicking on category or searching on search bar
-  app.get("/categories/:id", (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    console.log("Searching for ", id);
-    const fishData = fishes.filter((f) => f.category_id === id);
-    res.send(fishData);
-  });
-  // client.close();
 });
 
 app.listen(port, () => {
