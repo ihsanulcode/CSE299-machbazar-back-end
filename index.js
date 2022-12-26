@@ -7,9 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // -------------------------------------fake data------------------------------------
-const fishes = require("./fakeData/crabData.json");
 const categories = require("./fakeData/categories.json");
-const fishCards = require("./fakeData/fishCardData.json");
 const { json } = require("express");
 // -----------------------------------------------------------------------------------
 
