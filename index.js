@@ -55,6 +55,7 @@ client.connect((err) => {
     const updatedUser = {
       $set: {
         address: user.address,
+        phone: user.phone,
       },
     };
     console.log(user);
