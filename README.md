@@ -1,3 +1,11 @@
+#Install Nodemon to run the back-end server countinuously
+
+### `npm install -g nodemon`
+
+#Run back-end
+
+### `nodemon index.js`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
