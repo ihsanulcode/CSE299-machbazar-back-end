@@ -1,8 +1,8 @@
-#Install Nodemon to run the back-end server countinuously
+# Install Nodemon to run the back-end server countinuously
 
 ### `npm install -g nodemon`
 
-#Run back-end
+# Run back-end
 
 ### `nodemon index.js`
 
